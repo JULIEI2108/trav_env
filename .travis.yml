@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t trav_env .
-  - docker tag simple-node juliejin/trav_env:latest
+  - docker tag trav_env juliejin/trav_env:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
